@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Perfomance
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <table>
+    <thead>
+      <th>Value</th>
+      <th>Time</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of results">
+        <td>{{item.data}}</td>
+        <td>{{item.time}}</td>
+      </tr>
+    </tbody>
+    <p>Average: {{average}} ms</p>
+  </table>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="run()">
+    <ion-fab-button>
+      <ion-icon name="play"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

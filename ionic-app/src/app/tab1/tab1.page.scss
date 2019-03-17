@@ -1,0 +1,15 @@
+ion-card-content {
+  display: flex;
+  .cover-container {
+    flex: 1;
+    ion-img {
+      border-radius: 50%;
+      max-height: 35vh;
+      overflow: hidden;
+    }
+  }
+  .text-container {
+    padding-left: 10px;
+    flex: 2;
+  }
+}

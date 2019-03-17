@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Cards
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card class="welcome-card" *ngFor="let item of items; let i = index">
+      <ion-card-content>
+        <div class="cover-container">
+            <ion-img src="https://picsum.photos/200/200/?image={{i}}"></ion-img>
+        </div>
+        <div class="text-container">
+          <ion-card-title>Card {{i + 1}}</ion-card-title>
+          <p>Now that your app has been created, you'll want to start building out features and components. Check out some of the resources below for next steps.</p>
+        </div>
+      </ion-card-content>
+    </ion-card>
+</ion-content>
