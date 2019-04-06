@@ -19,7 +19,7 @@ export class Tab2Page {
     this.results = [];
     for (let i = 0; i < 20; i++) {
       const start = performance.now();
-      const result = this.factorial(100);
+      const result = this.calculatePi();
       const finish = performance.now();
       this.results.push({
         data: result,
@@ -27,11 +27,15 @@ export class Tab2Page {
       });
     }
   }
-
-  private factorial(value: number): number {
-    if (value === 1) {
-      return value;
+  calculatePi() {
+    let result = 0;
+    for (let i = 0; i < 10000; i++) {
+        result += this.pi(i);
     }
-    return value * this.factorial(value - 1);
+    return result;
+  }
+
+  pi(i) {
+      return (1 / Math.pow(16, i)) * (4 / (8 * i + 1) - 2 / (8 * i + 4) - 1 / (8 * i + 5) - 1 / (8 * i + 6));
   }
 }
